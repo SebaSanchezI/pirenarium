@@ -25,6 +25,7 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@config/*": ["src/config/*"],
+      "@context/*": ["src/context/*"],
       "@pages/*": ["src/config/*"],
       "@shared/*": ["src/shared/*"],
       "@models/*": ["src/models/*"],
