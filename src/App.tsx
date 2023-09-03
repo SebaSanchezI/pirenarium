@@ -1,11 +1,12 @@
-import './App.css'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import { useThemeContext } from '@context/theme/themeContextProvider'
 
-function App () {
+export function App () {
+  const { theme } = useThemeContext()
+
   return (
-    <>
-      <h1>Landing Page</h1>
-    </>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+    </ThemeProvider>
   )
 }
-
-export default App

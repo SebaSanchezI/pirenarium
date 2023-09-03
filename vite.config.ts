@@ -9,6 +9,7 @@ export default defineConfig({
       "@assets": `${path.resolve(__dirname, "./src/assets/")}`,
       "@components": `${path.resolve(__dirname, "./src/components/")}`,
       "@config": `${path.resolve(__dirname, "./src/config/")}`,
+      "@context": `${path.resolve(__dirname, "./src/context/")}`,
       "@pages": path.resolve(__dirname, "./src/pages"),
       "@shared": path.resolve(__dirname, "./src/shared"),
       "@models": `${path.resolve(__dirname, "./src/models")}`,
