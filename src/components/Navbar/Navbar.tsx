@@ -7,23 +7,24 @@ import {
   AppBar,
   Drawer,
   Grid,
-  Typography,
   IconButton,
   ListItem,
   ListItemButton,
-  ListItemText
+  ListItemText,
+  Box
 } from '@mui/material'
 import { type NavItem } from './models/navbar.type'
 import { NavListDrawer } from './components/NavListDrawer'
 import { LIST_ITEMS_NAV } from './data'
 import ThemeModeToggle from '@shared/ThemeModeToggle/ThemeModeToggle'
+import logoPath from '@assets/logo-pirenarium.png'
 
 interface NavbarProps { }
 
 const Navbar: React.FC<NavbarProps> = () => {
   const location = document.location
   const { mode, theme } = useThemeContext()
-  // console.log(mode, theme)
+
   const [open, setOpen] = useState<boolean>(false)
   const [hash, setHash] = useState<string>(LIST_ITEMS_NAV[0].path)
 
@@ -33,9 +34,12 @@ const Navbar: React.FC<NavbarProps> = () => {
   }
 
   const handleClicButton = (path: string): void => {
-    console.log(path)
     location.assign(path)
     setHash(path)
+  }
+  const handleClicListDrawer = (path: string): void => {
+    handleClicButton(path)
+    setOpen(false)
   }
 
   return (
@@ -48,9 +52,20 @@ const Navbar: React.FC<NavbarProps> = () => {
               onClick={() => { setOpen(true) }}
               sx={{ display: { xs: 'bloke', sm: 'bloke', md: 'none' } }}
             >
-              <MenuIcon />
+              <MenuIcon color='primary' sx={{ fontSize: '30px' }} />
             </IconButton>
-            <Typography color='primary' sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>Logo</Typography>
+            <Box
+              component='img'
+              sx={{
+                height: 80,
+                width: 100,
+                maxHeight: { md: 80 },
+                maxWidth: { md: 100 },
+                display: { xs: 'none', sm: 'none', md: 'block' }
+              }}
+              alt='Pirenarium Logo'
+              src={logoPath}
+            />
           </Grid>
           <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
             <ListItem>
@@ -60,8 +75,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                   selected={hash === path}
                   onClick={() => { handleClicButton(path) }}
                   >
-                  <ListItemText
-                    primary={label} primaryTypographyProps={{ fontWeight: 600 }} />
+                  <ListItemText primary={label} primaryTypographyProps={{ fontWeight: 600 }} />
                 </ListItemButton>
               ))}
             </ListItem>
@@ -71,20 +85,24 @@ const Navbar: React.FC<NavbarProps> = () => {
               size='large'
               onClick={handleSendToInstagram}
             >
-              <InstagramIcon color='primary' sx={{ fontSize: '28px' }} />
+              <InstagramIcon color='primary' sx={{ fontSize: '30px' }} />
             </IconButton>
             <ThemeModeToggle />
           </Grid>
         </Grid>
       </AppBar>
-
       <Drawer
         open={open}
         anchor='left'
         onClose={() => { setOpen(false) }}
         sx={{ display: { xs: 'bloke', sm: 'bloke', md: 'none' } }}
       >
-        <NavListDrawer listItems={LIST_ITEMS_NAV} location={location.hash} color={theme.palette.primary.main}/>
+        <NavListDrawer
+          listItems={LIST_ITEMS_NAV}
+          location={hash}
+          color={theme.palette.primary.main}
+          onClick={handleClicListDrawer}
+        />
       </Drawer>
     </>
   )

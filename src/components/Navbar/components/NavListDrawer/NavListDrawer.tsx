@@ -6,20 +6,25 @@ interface NavListDrawerProps {
   listItems: NavItem[]
   location: string
   color: string
+  onClick: (path: string) => void
 }
 
-const NavListDrawer: React.FC<NavListDrawerProps> = ({ listItems, location, color }) => {
+const NavListDrawer: React.FC<NavListDrawerProps> = ({ listItems, location, color, onClick }) => {
   return <Box sx={{ width: '250px' }}>
     <List>
         {listItems.map(({ id, label, path }: NavItem) => (
-          <ListItem key={id}>
+          <ListItem
+            key={id}
+            selected={location === path}
+            sx={{ '&.Mui-selected': { padding: '8px 16px 8px 10px', backgroundColor: 'transparent' } }}
+          >
             <ListItemButton
-              component='a'
-              href={`${path}`}
               selected={location === path}
+              onClick={() => { onClick(path) }}
               sx={{
                 '&.Mui-selected': {
-                  borderLeft: `2px solid ${color}`
+                  borderLeft: `6px solid ${color}`,
+                  borderBottom: 'none'
                 }
               }}
             >
