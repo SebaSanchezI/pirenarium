@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import { useThemeContext } from '@context/theme/themeContextProvider'
 import MenuIcon from '@mui/icons-material/Menu'
@@ -20,11 +20,23 @@ import ThemeModeToggle from '@shared/ThemeModeToggle/ThemeModeToggle'
 
 interface NavbarProps { }
 
-const Navbar: React.FC<object> = () => {
+const Navbar: React.FC<NavbarProps> = () => {
   const location = document.location
   const { mode, theme } = useThemeContext()
-  console.log(mode, theme)
+  // console.log(mode, theme)
   const [open, setOpen] = useState<boolean>(false)
+  const [hash, setHash] = useState<string>(LIST_ITEMS_NAV[0].path)
+
+  const handleSendToInstagram = () => {
+    const win = window.open('https://www.instagram.com/', '_blank')
+    win?.focus()
+  }
+
+  const handleClicButton = (path: string): void => {
+    console.log(path)
+    location.assign(path)
+    setHash(path)
+  }
 
   return (
     <>
@@ -44,17 +56,12 @@ const Navbar: React.FC<object> = () => {
             <ListItem>
               {LIST_ITEMS_NAV.map(({ id, label, path }: NavItem) => (
                 <ListItemButton
-                  component='a'
-                  href={`${path}`}
-                  selected={location.hash === path}
                   key={id}
-                  sx={{
-                    '&.Mui-selected': {
-                      borderBottom: `2px solid ${theme.palette.primary.main}`
-                    }
-                  }}
+                  selected={hash === path}
+                  onClick={() => { handleClicButton(path) }}
                   >
-                  <ListItemText primary={label} />
+                  <ListItemText
+                    primary={label} primaryTypographyProps={{ fontWeight: 600 }} />
                 </ListItemButton>
               ))}
             </ListItem>
@@ -62,6 +69,7 @@ const Navbar: React.FC<object> = () => {
           <Grid item padding='0 16px'>
             <IconButton
               size='large'
+              onClick={handleSendToInstagram}
             >
               <InstagramIcon color='primary' sx={{ fontSize: '28px' }} />
             </IconButton>
@@ -72,7 +80,6 @@ const Navbar: React.FC<object> = () => {
 
       <Drawer
         open={open}
-        color='primary'
         anchor='left'
         onClose={() => { setOpen(false) }}
         sx={{ display: { xs: 'bloke', sm: 'bloke', md: 'none' } }}
