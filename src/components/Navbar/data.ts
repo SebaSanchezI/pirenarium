@@ -1,9 +1,4 @@
 import { type NavItem } from './models/navbar.type'
-import HomeIcon from '@mui/icons-material/Home'
-import BeachAccessIcon from '@mui/icons-material/BeachAccess'
-import BedIcon from '@mui/icons-material/Bed'
-import HelpCenterIcon from '@mui/icons-material/HelpCenter'
-import ContactPhoneIcon from '@mui/icons-material/ContactPhone'
 
 export const LIST_ITEMS_NAV: NavItem[] = [
   {
@@ -11,34 +6,34 @@ export const LIST_ITEMS_NAV: NavItem[] = [
     name: 'home',
     label: 'Home',
     path: '#home',
-    icon: HomeIcon
+    iconName: 'home'
   },
   {
     id: 2,
     name: 'services',
     label: 'Servicios',
     path: '#services',
-    icon: BeachAccessIcon
+    iconName: 'beachAccess'
   },
   {
     id: 3,
     name: 'rooms',
     label: 'Habitaciones',
     path: '#rooms',
-    icon: BedIcon
+    iconName: 'bed'
   },
   {
     id: 4,
     name: 'faqs',
     label: 'FAQ',
     path: '#faqs',
-    icon: HelpCenterIcon
+    iconName: 'helpCenter'
   },
   {
     id: 5,
     name: 'contact',
     label: 'Contacto',
     path: '#contact',
-    icon: ContactPhoneIcon
+    iconName: 'contactPhone'
   }
 ]

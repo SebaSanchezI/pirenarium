@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useThemeContext } from '@context/theme/themeContextProvider'
 import MenuIcon from '@mui/icons-material/Menu'
 import InstagramIcon from '@mui/icons-material/Instagram'
+import FacebookIcon from '@mui/icons-material/Facebook'
 import {
   AppBar,
   Drawer,
@@ -13,7 +14,7 @@ import {
   ListItemText,
   Box
 } from '@mui/material'
-import { type NavItem } from './models/navbar.type'
+import { SocialMediaName, type NavItem, SocialMediarUrl } from './models/navbar.type'
 import { NavListDrawer } from './components/NavListDrawer'
 import { LIST_ITEMS_NAV } from './data'
 import ThemeModeToggle from '@shared/ThemeModeToggle/ThemeModeToggle'
@@ -23,13 +24,14 @@ interface NavbarProps { }
 
 const Navbar: React.FC<NavbarProps> = () => {
   const location = document.location
-  const { mode, theme } = useThemeContext()
+  const { theme } = useThemeContext()
 
   const [open, setOpen] = useState<boolean>(false)
   const [hash, setHash] = useState<string>(LIST_ITEMS_NAV[0].path)
 
-  const handleSendToInstagram = () => {
-    const win = window.open('https://www.instagram.com/', '_blank')
+  const handleSendTo = (name: SocialMediaName) => {
+    const url = name === SocialMediaName.INSTAGRAM ? SocialMediarUrl.INSTAGRAM : SocialMediarUrl.FACEBOOK
+    const win = window.open(url, '_blank')
     win?.focus()
   }
 
@@ -44,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
   return (
     <>
-      <AppBar>
+      <AppBar sx={{ padding: { xs: '8px 16px', sm: '8px 16px', md: '0 16px' } }}>
         <Grid container alignItems='center' justifyContent='space-between'>
           <Grid item padding='0 16px'>
             <IconButton
@@ -61,7 +63,8 @@ const Navbar: React.FC<NavbarProps> = () => {
                 width: 100,
                 maxHeight: { md: 80 },
                 maxWidth: { md: 100 },
-                display: { xs: 'none', sm: 'none', md: 'block' }
+                display: { xs: 'none', sm: 'none', md: 'block' },
+                padding: '8px'
               }}
               alt='Pirenarium Logo'
               src={logoPath}
@@ -80,12 +83,20 @@ const Navbar: React.FC<NavbarProps> = () => {
               ))}
             </ListItem>
           </Grid>
-          <Grid item padding='0 16px'>
+          <Grid item padding='0 16px' sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
             <IconButton
               size='large'
-              onClick={handleSendToInstagram}
+              onClick={() => { handleSendTo(SocialMediaName.INSTAGRAM) }}
+              sx={{ marginLeft: '8px' }}
             >
-              <InstagramIcon color='primary' sx={{ fontSize: '30px' }} />
+              <InstagramIcon color='primary' />
+            </IconButton>
+            <IconButton
+              size='large'
+              onClick={() => { handleSendTo(SocialMediaName.FACEBOOK) }}
+             sx={{ marginLeft: '8px' }}
+            >
+              <FacebookIcon color='primary' />
             </IconButton>
             <ThemeModeToggle />
           </Grid>
@@ -102,6 +113,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           location={hash}
           color={theme.palette.primary.main}
           onClick={handleClicListDrawer}
+          sendSocialMediaFunction={handleSendTo}
         />
       </Drawer>
     </>
