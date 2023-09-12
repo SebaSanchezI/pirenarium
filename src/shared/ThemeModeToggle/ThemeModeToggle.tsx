@@ -5,7 +5,13 @@ import { MaterialUISwitch } from './styled'
 const ThemeModeToggle = () => {
   const { mode, toggleColorMode } = useThemeContext()
   return (
-      <MaterialUISwitch sx={{ m: 1 }} onChange={toggleColorMode} checked={mode === ThemeModes.DARK} name='toggleTheme' />
+      <MaterialUISwitch
+        size='small'
+        sx={{ m: 1 }}
+        onChange={toggleColorMode}
+        checked={mode === ThemeModes.DARK}
+        name='toggleTheme'
+      />
   )
 }
 
