@@ -4,9 +4,13 @@ import { getDesignTokens } from './theme'
 import { ThemeModes } from './models/theme.type'
 
 export const useColorTheme = () => {
-  const [mode, setMode] = React.useState<PaletteMode>('light')
+  const [mode, setMode] = React.useState<PaletteMode>(ThemeModes.LIGHT)
 
-  const toggleColorMode = () => { setMode((prevMode) => (prevMode === ThemeModes.LIGHT ? ThemeModes.DARK : ThemeModes.LIGHT)) }
+  const toggleColorMode = () => {
+    setMode(
+      prevMode => (prevMode === ThemeModes.LIGHT ? ThemeModes.DARK : ThemeModes.LIGHT)
+    )
+  }
 
   const modifiedTheme = React.useMemo(
     () => createTheme(getDesignTokens(mode)),
