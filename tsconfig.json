@@ -30,6 +30,7 @@
       "@shared/*": ["src/shared/*"],
       "@models/*": ["src/models/*"],
       "@utils/*": ["src/utils/*"],
+      "@global/*": ["src/global/*"],
       "@public/*": ["public/*"]
     }
   },
