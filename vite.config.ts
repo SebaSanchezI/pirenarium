@@ -14,6 +14,7 @@ export default defineConfig({
       "@shared": path.resolve(__dirname, "./src/shared"),
       "@models": `${path.resolve(__dirname, "./src/models")}`,
       "@utils": `${path.resolve(__dirname, "./src/utils")}`,
+      "@global": `${path.resolve(__dirname, "./src/global")}`,
       "@public": `${path.resolve(__dirname, "./public/")}`,
     }
   }
