@@ -1,40 +1,35 @@
-import { TITLES } from '@global/constants'
+import { SECTION_IDS, TITLE } from '@global/constants'
 import { type NavItem } from './models/navbar.type'
 
 export const LIST_ITEMS_NAV: NavItem[] = [
   {
     id: 1,
-    name: 'home',
     label: 'Home',
-    path: '#home',
+    path: `#${SECTION_IDS.HOME}`,
     iconName: 'home'
   },
   {
     id: 2,
-    name: 'services',
-    label: TITLES.SERVICES,
-    path: '#services',
+    label: TITLE.SERVICES,
+    path: `#${SECTION_IDS.SERVICES}`,
     iconName: 'beachAccess'
   },
   {
     id: 3,
-    name: 'rooms',
-    label: TITLES.ROOMS,
-    path: '#rooms',
+    label: TITLE.ROOMS,
+    path: `#${SECTION_IDS.ROOMS}`,
     iconName: 'bed'
   },
   {
     id: 4,
-    name: 'faqs',
-    label: TITLES.FAQ,
-    path: '#faqs',
+    label: TITLE.FAQ,
+    path: `#${SECTION_IDS.FAQ}`,
     iconName: 'helpCenter'
   },
   {
     id: 5,
-    name: 'contact',
-    label: TITLES.CONTACT,
-    path: '#contact',
+    label: TITLE.CONTACT,
+    path: `#${SECTION_IDS.CONTACT}`,
     iconName: 'contactPhone'
   }
 ]
