@@ -15,7 +15,7 @@ export const ImageSliderContainer = styled('div')`
   min-width: 300px,
   min-height: 100px;
   border-radius: 8px;
-  background-color: #000000c7;
+  background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%) rgba(0, 0, 0, 0.1);
 `
 
 export const Img = styled('img')`
@@ -23,8 +23,9 @@ export const Img = styled('img')`
   box-shadow: 0 0 8px #666;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   transition: 0.5s easy-out;
-  z-index: 0;
+  z-index: -1;
 `
 
 export const ArrrowButtonLeft = styled(IconButton)`

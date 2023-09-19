@@ -78,7 +78,7 @@ const ImageSlider = ( { slices, showArrows, autoPlay, width, height }: ImageSlid
           </ArrrowButtonRight>
         }
       
-        <Box position='absolute' display='flex' bottom='1rem'sx={{ backgroundColor: '#242222ad', borderRadius: '12px' }}>
+        <Box position='absolute' display='flex' bottom='12px'sx={{ borderRadius: '12px' }}>
           {slices.map((_,idx) => (
             <IconButton key={idx} size='small' onClick={() => setSliceSelected(idx)} sx={{ padding: 0, border: 'none' }}>
               <FiberManualRecordIcon
