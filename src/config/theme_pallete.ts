@@ -8,9 +8,9 @@ export const THEME_PALLETE_LIGHT = {
     main: '#fdc071'
   },
   background: {
-    default: '#fff',
-    paper: '#fff',
-    navbar: '#ffffffcc'
+    default: '#f8f8f8',
+    paper: '#f8f8f8',
+    navbar: '#f8f8f8cc'
   },
   text: {
     primary: '#14599c',
