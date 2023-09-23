@@ -1,7 +1,7 @@
+import React, { type ReactNode } from 'react'
 import { Box, Typography } from '@mui/material'
-import React, { ReactNode } from 'react'
 
-type SectionComponentProps = {
+interface SectionComponentProps {
   sectionId: string
   title: string
   children: ReactNode
@@ -9,7 +9,7 @@ type SectionComponentProps = {
 
 const SectionComponent: React.FC<SectionComponentProps> = ({ sectionId, title, children }) => {
   return (
-    <Box id={sectionId} component='section' display='flex' flexDirection='column'>
+    <Box id={sectionId} component='section' display='flex' flexDirection='column' marginBottom='32px'>
       <Typography variant='h3' textAlign='start' marginBottom='16px'>
         {title}
       </Typography>
