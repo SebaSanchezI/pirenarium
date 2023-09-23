@@ -3,10 +3,9 @@ import { type PaletteMode } from '@mui/material'
 import { ThemeModes } from './models/theme.type'
 
 export const getDesignTokens = (mode: PaletteMode) => ({
-  // typography: {
-  //   // esto setea la font global
-  //   fontFamily: themePalette.font.jetBrains
-  // },
+  typography: {
+    fontFamily: "'Rubik', sans-serif"
+  },
   palette: {
     mode,
     ...(
@@ -22,7 +21,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
           backgroundColor: `${mode === ThemeModes.LIGHT
             ? THEME_PALLETE_LIGHT.background.navbar
             : THEME_PALLETE_DARK.background.navbar
-          }`,
+            }`,
           backdropFilter: 'blur(16px)',
           boxShadow: 'none',
           backgroundImage: 'none'
@@ -35,7 +34,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
           backgroundColor: `${mode === ThemeModes.LIGHT
             ? THEME_PALLETE_LIGHT.background.paper
             : THEME_PALLETE_DARK.background.paper
-          }`,
+            }`,
           backgroundImage: 'none'
         }
       }
