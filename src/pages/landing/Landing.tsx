@@ -8,7 +8,7 @@ const Landing: React.FC<LandingProps> = () => {
   return (
     <>
       <SectionComponent title={TITLE.MAIN} sectionId={SECTION_IDS.HOME}>
-        <ImageSlider slices={Slices} autoPlay width='100%' height='480px'/>
+        <ImageSlider slices={Slices} autoPlay width='100%' height='480px' />
       </SectionComponent>
     </>
   )
