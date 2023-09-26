@@ -10,8 +10,8 @@ import { useThemeContext } from '@context/theme/themeContextProvider'
 import { ThemeModes } from '@context/theme/models/theme.type'
 
 const ServiceCard: React.FC<ServiceCardInterface> = ({ icon, title, description }) => {
-  const { mode } = useThemeContext()
-  console.log(mode)
+  const { mode, theme } = useThemeContext()
+
   return (
     <Card sx={{
       maxWidth: 200,
@@ -19,17 +19,23 @@ const ServiceCard: React.FC<ServiceCardInterface> = ({ icon, title, description 
       margin: 2,
       transition: 'all 0.25s',
       boxShadow: `0px 6px 6px -1px rgba(0,0,0,${mode === ThemeModes.LIGHT ? '0.25' : '0.75'})`,
+      backgroundColor: `${mode === ThemeModes.LIGHT && theme.palette.background.white}`,
       '&:hover': {
         transform: 'scale(1.1, 1.1)',
         boxShadow: '0 16px 16px rgba(0,0,0,0.25)'
       }
     }}
     >
-      <CardMedia sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '16px' }}>
+      <CardMedia sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: '16px'
+      }}>
         <Icon sx={{ fontSize: 72 }}>{icon}</Icon>
       </CardMedia>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div" textAlign='center'>
+        <Typography gutterBottom variant="h5" component="div" textAlign='center' fontWeight='500' >
           {title}
         </Typography>
         <Typography variant="body2" color="text.secondary" textAlign='justify' >
