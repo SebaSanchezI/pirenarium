@@ -1,6 +1,8 @@
 import { SECTION_IDS, TITLE } from '@global/constants'
 import { ImageSlider, SectionComponent } from '@components/index'
 import { Slices } from '@components/imageSlider/data'
+import ServicesListCards from '@components/servicesListCards'
+import { LIST_CARDS } from '@components/servicesListCards/data/data'
 
 interface LandingProps {}
 
@@ -11,6 +13,7 @@ const Landing: React.FC<LandingProps> = () => {
         <ImageSlider slices={Slices} autoPlay width='100%' height='480px' />
       </SectionComponent>
       <SectionComponent title={TITLE.SERVICES} sectionId={SECTION_IDS.SERVICES}>
+        <ServicesListCards list={LIST_CARDS} />
       </SectionComponent>
       <SectionComponent title={TITLE.ROOMS} sectionId={SECTION_IDS.ROOMS}>
       </SectionComponent>
