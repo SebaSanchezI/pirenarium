@@ -11,6 +11,7 @@ import { ThemeModes } from '@context/theme/models/theme.type'
 
 const ServiceCard: React.FC<ServiceCardInterface> = ({ icon, title, description }) => {
   const { mode, theme } = useThemeContext()
+  console.log(theme.palette.background)
 
   return (
     <Card sx={{
@@ -18,7 +19,7 @@ const ServiceCard: React.FC<ServiceCardInterface> = ({ icon, title, description 
       minHeight: 250,
       margin: 2,
       transition: 'all 0.25s',
-      boxShadow: `0px 6px 6px -1px rgba(0,0,0,${mode === ThemeModes.LIGHT ? '0.25' : '0.75'})`,
+      boxShadow: '0 1px 2px 0 rgba(48, 48, 48, .30), 0 1px 3px 1px rgba(48, 48, 48, .15)',
       backgroundColor: `${mode === ThemeModes.LIGHT && theme.palette.background.white}`,
       '&:hover': {
         transform: 'scale(1.1, 1.1)',
