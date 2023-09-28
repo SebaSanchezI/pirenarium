@@ -4,7 +4,15 @@ import { ThemeModes } from './models/theme.type'
 
 export const getDesignTokens = (mode: PaletteMode) => ({
   typography: {
-    fontFamily: "'Rubik', sans-serif"
+    fontFamily: "'Rubik', sans-serif",
+    h3: {
+      color: `${mode === ThemeModes.LIGHT
+        ? THEME_PALLETE_LIGHT.text.secondary
+        : THEME_PALLETE_DARK.text.secondary
+        }`,
+      fontSize: '2rem',
+      fontWeight: 600
+    }
   },
   palette: {
     mode,
