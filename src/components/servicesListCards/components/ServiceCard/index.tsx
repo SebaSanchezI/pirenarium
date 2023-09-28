@@ -11,7 +11,6 @@ import { ThemeModes } from '@context/theme/models/theme.type'
 
 const ServiceCard: React.FC<ServiceCardInterface> = ({ icon, title, description }) => {
   const { mode, theme } = useThemeContext()
-  console.log(theme.palette.background)
 
   return (
     <Card sx={{
