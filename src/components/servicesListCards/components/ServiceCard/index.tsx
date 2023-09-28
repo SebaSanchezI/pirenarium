@@ -32,13 +32,20 @@ const ServiceCard: React.FC<ServiceCardInterface> = ({ icon, title, description 
         alignItems: 'center',
         paddingTop: '16px'
       }}>
-        <Icon sx={{ fontSize: 72 }}>{icon}</Icon>
+        <Icon sx={{ fontSize: 72, color: theme.palette.text.secondary }} >{icon}</Icon>
       </CardMedia>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div" textAlign='center' fontWeight='500' >
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          textAlign='center'
+          fontWeight='500'
+          color='text.secondary'
+        >
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary" textAlign='justify' >
+        <Typography variant='body2' color='text.primary' textAlign='justify'>
           {description}
         </Typography>
       </CardContent>

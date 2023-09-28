@@ -7,8 +7,8 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     fontFamily: "'Rubik', sans-serif",
     h3: {
       color: `${mode === ThemeModes.LIGHT
-        ? THEME_PALLETE_LIGHT.text.secondary
-        : THEME_PALLETE_DARK.text.secondary
+        ? THEME_PALLETE_LIGHT.text.primary
+        : THEME_PALLETE_DARK.text.primary
         }`,
       fontSize: '2rem',
       fontWeight: 600

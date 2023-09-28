@@ -14,8 +14,8 @@ export const THEME_PALLETE_LIGHT = {
     white: '#FFFFFF'
   },
   text: {
-    primary: '#14599c',
-    secondary: '#595d62',
+    primary: '#595d62',
+    secondary: '#14599c',
     disabled: '#e8e8e8'
   }
 }

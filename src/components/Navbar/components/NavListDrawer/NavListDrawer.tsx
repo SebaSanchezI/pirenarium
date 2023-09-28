@@ -49,7 +49,7 @@ const NavListDrawer: React.FC<NavListDrawerProps> = props => {
 
   return <Box sx={{ width: '250px' }}>
     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 16px' }}>
-      <Typography variant='h5'>Pirenarium</Typography>
+      <Typography variant='h5' fontWeight={600}>Pirenarium</Typography>
       {/* <IconButton size='medium' onClick={toggleColorMode}>
           <CloseIcon color='primary' sx={{ fontSize: '30px' }}/>
       </IconButton> */}
@@ -62,7 +62,7 @@ const NavListDrawer: React.FC<NavListDrawerProps> = props => {
       justifyContent: 'space-between',
       padding: '8px 16px'
     }}>
-      <Typography>Tema</Typography>
+      <Typography fontWeight={600}>Tema</Typography>
       <Stack flexDirection='row' alignItems='center' width='100%' justifyContent='center'>
         <Typography>Light</Typography>
         <ThemeModeToggle />
@@ -76,7 +76,7 @@ const NavListDrawer: React.FC<NavListDrawerProps> = props => {
       justifyContent: 'space-between',
       padding: '8px 16px'
     }}>
-      <Typography>Seguinos</Typography>
+      <Typography fontWeight={600}>Seguinos</Typography>
       <Stack flexDirection='row' alignItems='center' width='100%' justifyContent='flex-end'>
         <IconButton
           size='large'
