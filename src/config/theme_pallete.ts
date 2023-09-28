@@ -8,9 +8,10 @@ export const THEME_PALLETE_LIGHT = {
     main: '#fdc071'
   },
   background: {
-    default: '#f8f8f8',
-    paper: '#f8f8f8',
-    navbar: '#f8f8f8cc'
+    default: '#f2f4f6',
+    paper: '#f2f4f6',
+    navbar: '#f2f4f6cc',
+    white: '#FFFFFF'
   },
   text: {
     primary: '#14599c',
@@ -29,7 +30,8 @@ export const THEME_PALLETE_DARK = {
   background: {
     default: '#0e1924',
     paper: '#172a3d',
-    navbar: '#0e1924cc'
+    navbar: '#0e1924cc',
+    white: '#FFFFFF'
   },
   text: {
     primary: '#ffffff',
