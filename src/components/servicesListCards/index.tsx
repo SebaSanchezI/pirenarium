@@ -9,7 +9,7 @@ interface ListCardsProps {
 
 const ServicesListCards: React.FC<ListCardsProps> = ({ list }) => {
   return (
-    <Grid container alignItems='center' justifyContent='center' padding='32px'>
+    <Grid container alignItems='center' justifyContent='center' padding='0 32px'>
       {
         list.length > 0 &&
         list.map((card, idx) => (
