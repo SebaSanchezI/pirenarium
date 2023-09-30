@@ -4,6 +4,7 @@ import { Slices } from '@components/imageSlider/data'
 import ServicesListCards from '@components/servicesListCards'
 import { LIST_CARDS } from '@components/servicesListCards/data/data'
 import ImageContainer from '@components/imageList/ImageContainer'
+import AccordionList from '@components/accordionList/AcordionList'
 
 interface LandingProps {}
 
@@ -20,6 +21,7 @@ const Landing: React.FC<LandingProps> = () => {
         <ImageContainer />
       </SectionComponent>
       <SectionComponent title={TITLE.FAQ} sectionId={SECTION_IDS.FAQ}>
+        <AccordionList />
       </SectionComponent>
       <SectionComponent title={TITLE.CONTACT} sectionId={SECTION_IDS.CONTACT}>
       </SectionComponent>
