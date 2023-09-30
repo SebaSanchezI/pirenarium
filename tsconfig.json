@@ -31,7 +31,8 @@
       "@models/*": ["src/models/*"],
       "@utils/*": ["src/utils/*"],
       "@global/*": ["src/global/*"],
-      "@public/*": ["public/*"]
+      "@hooks/*": ["src/hooks/*"],
+      "@public/*": ["public/*"],
     }
   },
   "include": ["src"],
