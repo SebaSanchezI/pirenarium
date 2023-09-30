@@ -3,11 +3,16 @@ import Box from '@mui/material/Box'
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import useBreakpoint from '@hooks/useBreakpoints'
+import { CustomImage } from './styles'
+import { useThemeContext } from '@context/theme/themeContextProvider'
+import { ThemeModes } from '@context/theme/models/theme.type'
 
 interface Props {}
 
 const ImageContainer: React.FC<Props> = () => {
+  const { theme } = useThemeContext()
   const breakpoint = useBreakpoint()
+
   const cols = {
     xs: 1,
     sm: 2,
@@ -19,7 +24,17 @@ const ImageContainer: React.FC<Props> = () => {
   return (
     <Box sx={{
       height: 'calc(90vh - 104px)',
-      overflowY: 'scroll'
+      overflowY: 'scroll',
+      '::-webkit-scrollbar': {
+        width: '8px'
+      },
+      '::-webkit-scrollbar-track': {
+        background: 'transparent'
+      },
+      '::-webkit-scrollbar-thumb': {
+        backgroundColor: `${theme.palette.mode === ThemeModes.DARK ? '#233448' : '#c1c1c1'}`,
+        borderRadius: '8px'
+      }
     }}>
       <ImageList
         variant='masonry'
@@ -27,8 +42,19 @@ const ImageContainer: React.FC<Props> = () => {
         gap={8}
       >
         {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
+          <ImageListItem
+            key={item.img}
+            sx={{
+              overflow: 'hidden',
+              cursor: 'pointer',
+              '&:hover': {
+                '& > img': {
+                  transform: 'scale(1.2)'
+                }
+              }
+            }}
+          >
+            <CustomImage
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               src={`${item.img}?w=248&fit=crop&auto=format`}
               alt={item.title}
