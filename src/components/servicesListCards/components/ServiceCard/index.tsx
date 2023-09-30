@@ -19,7 +19,7 @@ const ServiceCard: React.FC<ServiceCardInterface> = ({ icon, title, description 
       margin: 2,
       transition: 'all 0.25s',
       boxShadow: '0 1px 2px 0 rgba(48, 48, 48, .30), 0 1px 3px 1px rgba(48, 48, 48, .15)',
-      backgroundColor: `${mode === ThemeModes.LIGHT && theme.palette.background.white}`,
+      backgroundColor: `${mode === ThemeModes.LIGHT && '#FFFFFF'}`,
       '&:hover': {
         transform: 'scale(1.1, 1.1)',
         boxShadow: '0 16px 16px rgba(0,0,0,0.25)'
