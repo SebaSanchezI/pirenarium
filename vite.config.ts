@@ -15,6 +15,7 @@ export default defineConfig({
       "@models": `${path.resolve(__dirname, "./src/models")}`,
       "@utils": `${path.resolve(__dirname, "./src/utils")}`,
       "@global": `${path.resolve(__dirname, "./src/global")}`,
+      "@hooks": `${path.resolve(__dirname, "./src/hooks/")}`,
       "@public": `${path.resolve(__dirname, "./public/")}`,
     }
   }
