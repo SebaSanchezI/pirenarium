@@ -10,6 +10,7 @@ const AccordionList = () => {
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      console.log(event)
       setExpanded(isExpanded ? panel : false)
     }
 
