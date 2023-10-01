@@ -22,7 +22,7 @@ const AccordionList = () => {
           id="panel1bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            General settings
+            Como llegar hasta le lugar
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
         </AccordionSummary>
