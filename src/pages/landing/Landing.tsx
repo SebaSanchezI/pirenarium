@@ -5,6 +5,7 @@ import ServicesListCards from '@components/servicesListCards'
 import { LIST_CARDS } from '@components/servicesListCards/data/data'
 import ImageContainer from '@components/imageList/ImageContainer'
 import AccordionList from '@components/accordionList/AcordionList'
+import { ACCORDION_DATA_LIST } from '@components/accordionList/data/accordionDataList'
 
 interface LandingProps {}
 
@@ -21,7 +22,7 @@ const Landing: React.FC<LandingProps> = () => {
         <ImageContainer />
       </SectionComponent>
       <SectionComponent title={TITLE.FAQ} sectionId={SECTION_IDS.FAQ}>
-        <AccordionList />
+        <AccordionList list={ACCORDION_DATA_LIST}/>
       </SectionComponent>
       <SectionComponent title={TITLE.CONTACT} sectionId={SECTION_IDS.CONTACT}>
       </SectionComponent>
