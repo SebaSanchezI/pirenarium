@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import { type AccordionItemInterface } from './components/model/accordionItem.type'
 import AccordionItem from './components/accordion/AcordionItem'
 
@@ -8,16 +8,21 @@ interface AccordionListProps {
 
 interface SelectedItem {
   id: number
-  isExpanded?: boolean
+  isExpanded: boolean
+}
+
+const initialValue: SelectedItem = {
+  id: 0,
+  isExpanded: false
 }
 
 const AccordionList: React.FC<AccordionListProps> = ({ list }) => {
-  const [selected, setSelected] = React.useState<SelectedItem | null>(null)
+  const [selected, setSelected] = useState<SelectedItem>(initialValue)
 
-  const handleChange = (expanded: boolean | undefined, panelId: number) => {
+  const handleChange = (expanded: boolean, panelId: number) => {
     setSelected({
       id: panelId,
-      isExpanded: expanded
+      isExpanded: !expanded
     })
   }
 
@@ -27,7 +32,7 @@ const AccordionList: React.FC<AccordionListProps> = ({ list }) => {
           <AccordionItem
             key={accordion.panelId}
             accordionItem={accordion}
-            expanded={selected?.isExpanded}
+            expanded={accordion.panelId === selected.id && selected.isExpanded}
             onChange={handleChange}
           />
         ))

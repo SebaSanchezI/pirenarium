@@ -6,8 +6,8 @@ import { type AccordionItemInterface } from '../model/accordionItem.type'
 
 interface AccordionItemProps {
   accordionItem: AccordionItemInterface
-  expanded: boolean | undefined
-  onChange: (expanded: boolean | undefined, panelId: number) => void
+  expanded: boolean
+  onChange: (expanded: boolean, panelId: number) => void
 }
 
 const AccordionItem: React.FC<AccordionItemProps> = ({ accordionItem, expanded, onChange }) => {
@@ -20,7 +20,12 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ accordionItem, expanded, 
         aria-controls='panel1bh-content'
         id='panel1bh-header'
       >
-        <Typography sx={{ flexShrink: 0 }} variant='h6'>
+        <Typography
+          sx={{ flexShrink: 0 }}
+          color={expanded ? 'primary.main' : 'text.primary'}
+          fontWeight='bold'
+          variant='h6'
+        >
           {title}
         </Typography>
       </AccordionSummary>
