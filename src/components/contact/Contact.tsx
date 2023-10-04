@@ -20,7 +20,17 @@ const Contact: React.FC<ContactProps> = () => {
         <Typography variant='h6' fontWeight={600}>{CONTACT_TITLES.PHONE}</Typography>
         <Typography variant='h6' color='primary' fontWeight={600} marginBottom='8px'>{CONTACT_DATA.PHONE}</Typography>
         <Typography variant='h6' fontWeight={600}>{CONTACT_TITLES.EMAIL}</Typography>
-        <Typography variant='h6' color='primary' fontWeight={600} marginBottom='8px'>{CONTACT_DATA.EMAIL}</Typography>
+        <Link
+            href={`mailto:${CONTACT_DATA.EMAIL}`}
+            underline='none'
+            target='_blank'
+            rel='noopener'
+            marginBottom='8px'
+            fontSize='20px'
+            fontWeight={600}
+          >
+            {CONTACT_DATA.EMAIL}
+          </Link>
       </Grid>
       <Grid xs={12} sm={12} md={5} lg={6}>
         <Typography variant='h6' fontWeight={600}>{CONTACT_TITLES.MAP}</Typography>
