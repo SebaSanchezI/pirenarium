@@ -1,5 +1,5 @@
 export const TITLE = {
-  MAIN: 'Pirenarium Hotel',
+  MAIN: 'Espacio Pirenarium',
   SERVICES: 'Servicios',
   ROOMS: 'Habitaciones',
   FAQ: 'FAQ',
