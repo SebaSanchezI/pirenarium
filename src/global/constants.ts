@@ -3,7 +3,8 @@ export const TITLE = {
   SERVICES: 'Servicios',
   ROOMS: 'Habitaciones',
   FAQ: 'FAQ',
-  CONTACT: 'Contacto'
+  CONTACT: 'Contacto',
+  COMMON_SPACES: 'espacios comunes'
 }
 
 export const SECTION_IDS = {
