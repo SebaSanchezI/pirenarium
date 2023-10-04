@@ -18,7 +18,7 @@ import { SocialMediaName, type NavItem, SocialMediarUrl } from './models/navbar.
 import { NavListDrawer } from './components/NavListDrawer'
 import { LIST_ITEMS_NAV } from './data'
 import ThemeModeToggle from '@shared/ThemeModeToggle/ThemeModeToggle'
-import logoPath from '@assets/logo-pirenarium.png'
+import logoPath from '@assets/logo-chrome.png'
 
 interface NavbarProps { }
 
