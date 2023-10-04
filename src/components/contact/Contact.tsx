@@ -14,15 +14,25 @@ const Contact: React.FC<ContactProps> = () => {
       justifyContent='space-between'
       marginBottom='32px'
     >
-      <Grid xs={12} sm={12} md={3} lg={3}>
+      <Grid xs={12} sm={12} md={5} lg={4}>
         <Typography variant='h6' fontWeight={600}>{CONTACT_TITLES.ADDRESS}</Typography>
         <Typography variant='h6' color='primary' fontWeight={600} marginBottom='8px'>{CONTACT_DATA.ADDRESS}</Typography>
         <Typography variant='h6' fontWeight={600}>{CONTACT_TITLES.PHONE}</Typography>
         <Typography variant='h6' color='primary' fontWeight={600} marginBottom='8px'>{CONTACT_DATA.PHONE}</Typography>
         <Typography variant='h6' fontWeight={600}>{CONTACT_TITLES.EMAIL}</Typography>
-        <Typography variant='h6' color='primary' fontWeight={600} marginBottom='8px'>{CONTACT_DATA.EMAIL}</Typography>
+        <Link
+            href={`mailto:${CONTACT_DATA.EMAIL}`}
+            underline='none'
+            target='_blank'
+            rel='noopener'
+            marginBottom='8px'
+            fontSize='20px'
+            fontWeight={600}
+          >
+            {CONTACT_DATA.EMAIL}
+          </Link>
       </Grid>
-      <Grid xs={12} sm={12} md={6} lg={6}>
+      <Grid xs={12} sm={12} md={5} lg={6}>
         <Typography variant='h6' fontWeight={600}>{CONTACT_TITLES.MAP}</Typography>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2941.279137982693!2d-0.3616663813590915!3d42.506875675362586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd58211f7a9de001%3A0x249d09d8e87639c7!2sAlbergue%20-%20Hostel%20Pirenarium!5e0!3m2!1ses-419!2sit!4v1696323612246!5m2!1ses-419!2sit"
@@ -35,7 +45,7 @@ const Contact: React.FC<ContactProps> = () => {
           id='map'
           ></iframe>
       </Grid>
-      <Grid xs={12} sm={12} md={3} lg={3}>
+      <Grid xs={12} sm={12} md={2} lg={2}>
         <Typography variant='h6' marginBottom='8px' fontWeight={600}>{CONTACT_TITLES.BOOKING}</Typography>
         <Box display='flex' flexDirection='column'>
           <Link

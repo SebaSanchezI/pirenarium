@@ -17,13 +17,13 @@ interface LandingProps {}
 const Landing: React.FC<LandingProps> = () => {
   return (
     <>
-      <SectionComponent title={TITLE.MAIN} sectionId={SECTION_IDS.HOME} fullscreen>
+      <SectionComponent title={TITLE.MAIN} sectionId={SECTION_IDS.HOME}>
         <ImageSlider slices={Slices} autoPlay width='100%' height='480px' />
       </SectionComponent>
       <SectionComponent title={TITLE.SERVICES} sectionId={SECTION_IDS.SERVICES}>
         <ServicesListCards list={LIST_CARDS} />
       </SectionComponent>
-      <SectionComponent title={TITLE.ROOMS} sectionId={SECTION_IDS.ROOMS}>
+      <SectionComponent title={`${TITLE.ROOMS} y ${TITLE.COMMON_SPACES}`} sectionId={SECTION_IDS.ROOMS}>
         <ImageContainer list={IMAGE_ROOM_LIST } />
       </SectionComponent>
       <SectionComponent title={TITLE.FAQ} sectionId={SECTION_IDS.FAQ}>
