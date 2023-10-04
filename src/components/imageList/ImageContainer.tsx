@@ -22,7 +22,7 @@ const ImageContainer: React.FC<ImageContainerProps> = ({ list }) => {
     xs: 1,
     sm: 2,
     md: 3,
-    lg: 4,
+    lg: 3,
     xl: 5
   }[breakpoint]
 
