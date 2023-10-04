@@ -1,12 +1,16 @@
 import { SECTION_IDS, TITLE } from '@global/constants'
+
 import { ImageSlider, SectionComponent } from '@components/index'
-import { Slices } from '@components/imageSlider/data'
 import ServicesListCards from '@components/servicesListCards'
-import { LIST_CARDS } from '@components/servicesListCards/data/data'
+
 import ImageContainer from '@components/imageList/ImageContainer'
 import AccordionList from '@components/accordionList/AcordionList'
-import { ACCORDION_DATA_LIST } from '@components/accordionList/data/accordionDataList'
 import Contact from '@components/contact/Contact'
+
+import { Slices } from '@components/imageSlider/data'
+import { IMAGE_ROOM_LIST } from '@components/imageList/data/imageListData'
+import { LIST_CARDS } from '@components/servicesListCards/data/data'
+import { ACCORDION_DATA_LIST } from '@components/accordionList/data/accordionDataList'
 
 interface LandingProps {}
 
@@ -20,7 +24,7 @@ const Landing: React.FC<LandingProps> = () => {
         <ServicesListCards list={LIST_CARDS} />
       </SectionComponent>
       <SectionComponent title={TITLE.ROOMS} sectionId={SECTION_IDS.ROOMS}>
-        <ImageContainer />
+        <ImageContainer list={IMAGE_ROOM_LIST } />
       </SectionComponent>
       <SectionComponent title={TITLE.FAQ} sectionId={SECTION_IDS.FAQ}>
         <AccordionList list={ACCORDION_DATA_LIST}/>
