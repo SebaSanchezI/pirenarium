@@ -12,9 +12,9 @@ export const LIST_CARDS: ServiceCardInterface[] = [
     icon: 'parking'
   },
   {
-    title: 'Bar',
+    title: 'Restaurante',
     description: 'Consequat ut qui veniam magna elit culpa incididunt proident reprehenderit enim.',
-    icon: 'local_bar'
+    icon: 'restaurant'
   },
   {
     title: 'Sala de Juegos',
