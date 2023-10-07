@@ -2,7 +2,7 @@
   "name": "pirenarium",
   "private": false,
   "version": "0.0.0",
-  "homepage": ".",
+  "homepage": "https://sebasanchezi.github.io/pirenarium",
   "type": "module",
   "scripts": {
     "dev": "vite",
