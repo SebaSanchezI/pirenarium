@@ -19,8 +19,11 @@ import { NavListDrawer } from './components/NavListDrawer'
 import { LIST_ITEMS_NAV } from './data'
 import ThemeModeToggle from '@shared/ThemeModeToggle/ThemeModeToggle'
 import logoPath from '@assets/logo-chrome.png'
+import SelectLanguage from '@components/selectLanguage/SelectLanguage'
+import { LANGUAGE_LIST } from '@components/selectLanguage/data/languageList'
 
-interface NavbarProps { }
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
   const location = document.location
@@ -83,7 +86,16 @@ const Navbar: React.FC<NavbarProps> = () => {
               ))}
             </ListItem>
           </Grid>
-          <Grid item padding='0 16px' sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
+          <Grid
+            item
+            padding='0 16px'
+            sx={{
+              display: { xs: 'none', sm: 'none', md: 'flex' },
+              flexDirection: 'row',
+              alignItems: 'center'
+            }}
+          >
+            <SelectLanguage languages={LANGUAGE_LIST} />
             <IconButton
               size='large'
               onClick={() => { handleSendTo(SocialMediaName.INSTAGRAM) }}

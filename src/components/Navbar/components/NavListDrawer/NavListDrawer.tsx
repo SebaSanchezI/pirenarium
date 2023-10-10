@@ -22,6 +22,8 @@ import HelpCenterIcon from '@mui/icons-material/HelpCenter'
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone'
 
 import ThemeModeToggle from '@shared/ThemeModeToggle/ThemeModeToggle'
+import SelectLanguage from '@components/selectLanguage/SelectLanguage'
+import { LANGUAGE_LIST } from '@components/selectLanguage/data/languageList'
 
 interface NavListDrawerProps {
   listItems: NavItem[]
@@ -91,6 +93,16 @@ const NavListDrawer: React.FC<NavListDrawerProps> = props => {
               <FacebookIcon color='primary' />
             </IconButton>
       </Stack>
+    </Box>
+    <Divider />
+    <Box sx={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: '8px 16px'
+    }}>
+      <Typography fontWeight={600}>Idioma</Typography>
+      <SelectLanguage languages={LANGUAGE_LIST} />
     </Box>
     <Divider />
     <List>
