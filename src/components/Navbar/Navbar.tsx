@@ -21,6 +21,7 @@ import ThemeModeToggle from '@shared/ThemeModeToggle/ThemeModeToggle'
 import logoPath from '@assets/logo-chrome.png'
 import SelectLanguage from '@components/selectLanguage/SelectLanguage'
 import { LANGUAGE_LIST } from '@components/selectLanguage/data/languageList'
+import { useTranslation } from 'react-i18next'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface NavbarProps {}
@@ -28,6 +29,7 @@ interface NavbarProps {}
 const Navbar: React.FC<NavbarProps> = () => {
   const location = document.location
   const { theme } = useThemeContext()
+  const { t } = useTranslation()
 
   const [open, setOpen] = useState<boolean>(false)
   const [hash, setHash] = useState<string>(LIST_ITEMS_NAV[0].path)
@@ -42,10 +44,17 @@ const Navbar: React.FC<NavbarProps> = () => {
     location.assign(path)
     setHash(path)
   }
+
   const handleClicListDrawer = (path: string): void => {
     handleClicButton(path)
     setOpen(false)
   }
+
+  // const translation = (word: string) => {
+  //   // const f = `titles.${word}`
+  //   // console.log(f, t('titles.rooms'))
+  //   return t(`titles.${word}`)
+  // }
 
   return (
     <>
@@ -81,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                   selected={hash === path}
                   onClick={() => { handleClicButton(path) }}
                   >
-                  <ListItemText primary={label} primaryTypographyProps={{ fontWeight: 600 }} />
+                  <ListItemText primary={t(`titles.${label}`)} primaryTypographyProps={{ fontWeight: 600 }} />
                 </ListItemButton>
               ))}
             </ListItem>

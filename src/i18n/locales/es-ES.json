@@ -5,5 +5,10 @@
     "rooms": "Habitaciones",
     "faq": "FAQ",
     "contact": "Contacto"
+  },
+  "drawer": {
+    "theme": "Tema",
+    "followUs": "Seguinos en",
+    "language": "Idioma"
   }
 }

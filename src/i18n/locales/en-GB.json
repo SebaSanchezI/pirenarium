@@ -5,5 +5,10 @@
     "rooms": "Rooms",
     "faq": "FAQ",
     "contact": "Contact"
+  },
+  "drawer": {
+    "theme": "Theme",
+    "followUs": "Follow us in",
+    "language": "Language"
   }
 }

@@ -1,9 +1,9 @@
 export const TITLE = {
   MAIN: 'Espacio Pirenarium',
-  SERVICES: 'Servicios',
-  ROOMS: 'Habitaciones',
-  FAQ: 'FAQ',
-  CONTACT: 'Contacto',
+  SERVICES: 'services',
+  ROOMS: 'rooms',
+  FAQ: 'faq',
+  CONTACT: 'contact',
   COMMON_SPACES: 'espacios comunes'
 }
 
