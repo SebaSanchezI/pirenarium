@@ -38,6 +38,40 @@
         "title": "Shows",
         "description": "Outdoor shows and customized private events."
       }
+    },
+    "faq": {
+      "panelId1": {
+        "title": "How to book?",
+        "description": "In order to book a room you have to log in to Booking or Direct Book. You can find the links in the Contacts section."
+      },
+      "panelId2": {
+        "title": "Check-In y Check-Out",
+        "description": "The check-in to the resort is from 16:00 to 22:00. Check-out time is from 06:00 to 11:00."
+      },
+      "panelId3": {
+        "title": "Cancellation/Prepayment",
+        "description": "Cancellation and prepayment conditions may vary according to the type of accommodation. Please consult the conditions of the selected room by any of our means of communication."
+      },
+      "panelId4": {
+        "title": "How much does it cost to stay?",
+        "description": "Prices at Pirenarium Hotel may vary depending on the stay (dates, hotel conditions, etc.). Choose your dates to see the price."
+      },
+      "panelId5": {
+        "title": "What are the types of rooms?",
+        "description": "The resort has 2 types of rooms: double rooms and shared mixed rooms with 6 beds. There are no cribs or extra beds in this accommodation."
+      },
+      "panelId6": {
+        "title": "Payment methods",
+        "description": "We currently accept card payments only (we do not accept cash payments). We accept VISA, MASTERCARD, AMERICAN EXPRESS and MAESTRO cards and reserve the right to temporarily charge an amount prior to check-in."
+      },
+      "panelId7": {
+        "title": "Pets",
+        "description": "We currently do not accept pets."
+      },
+      "panelId8": {
+        "title": "What can be done?",
+        "description": "You can have lunch and dinner in our restaurant. Private events can be organized: parties, weddings, etc. You can enjoy outdoor shows and live music."
+      }
     }
   }
 }
