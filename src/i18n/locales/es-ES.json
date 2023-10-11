@@ -4,11 +4,41 @@
     "services": "Servicios",
     "rooms": "Habitaciones",
     "faq": "FAQ",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "commonSpaces": "Espacios comunes"
   },
   "drawer": {
     "theme": "Tema",
     "followUs": "Seguinos en",
     "language": "Idioma"
+  },
+  "section": {
+    "services": {
+      "hotel": {
+        "title": "Hotel",
+        "description": "El hotel tiene capacidad para 200 personas."
+      },
+      "restaurant": {
+        "title": "Restaurante",
+        "description": "Capacidad máxima de 200 personas. Sala de eventos y reuniones."
+      },
+      "meetings": {
+        "title": "Reuniones",
+        "description": "El complejo consta de diferentes salas de reuniones totalmente equipadas."
+      },
+      "wifi": {
+        "title": "WiFi",
+        "description": "WiFi en todas las zonas comunes del complejo."
+      },
+      "parking": {
+        "title": "Parking Gratis",
+        "description": "El complejo consta de parking para un máximo 20 plazas."
+      },
+      "shows": {
+        "title": "Espectáculos",
+        "description": "Espectáculos al aire libre y eventos privados a medida."
+      }
+    }
   }
+
 }

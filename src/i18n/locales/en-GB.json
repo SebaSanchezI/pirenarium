@@ -4,11 +4,40 @@
     "services": "Services",
     "rooms": "Rooms",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "commonSpaces": "Common spaces"
   },
   "drawer": {
     "theme": "Theme",
     "followUs": "Follow us in",
     "language": "Language"
+  },
+  "section": {
+    "services": {
+      "hotel": {
+        "title": "Hotel",
+        "description": "The hotel has capacity for 200 people."
+      },
+      "restaurant": {
+        "title": "Restaurant",
+        "description": "Maximum capacity of 200 people. Meeting and event room."
+      },
+      "meetings": {
+        "title": "Meetings",
+        "description": "The resort has several fully equipped meeting rooms."
+      },
+      "wifi": {
+        "title": "WiFi",
+        "description": "WiFi in all common areas of the resort."
+      },
+      "parking": {
+        "title": "Parking",
+        "description": "The resort has parking for a maximum of 20 cars."
+      },
+      "shows": {
+        "title": "Shows",
+        "description": "Outdoor shows and customized private events."
+      }
+    }
   }
 }

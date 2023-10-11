@@ -1,4 +1,4 @@
-import { SECTION_IDS, TITLE } from '@global/constants'
+import { SECTION_IDS } from '@global/constants'
 
 import { ImageSlider, SectionComponent } from '@components/index'
 import ServicesListCards from '@components/servicesListCards'
@@ -27,7 +27,7 @@ const Landing: React.FC<LandingProps> = () => {
       <SectionComponent title={t('titles.services')} sectionId={SECTION_IDS.SERVICES}>
         <ServicesListCards list={LIST_CARDS} />
       </SectionComponent>
-      <SectionComponent title={`${t('titles.rooms')} y ${TITLE.COMMON_SPACES}`} sectionId={SECTION_IDS.ROOMS}>
+      <SectionComponent title={`${t('titles.rooms')} y ${t('titles.commonSpaces')}`} sectionId={SECTION_IDS.ROOMS}>
         <ImageContainer list={IMAGE_ROOM_LIST } />
       </SectionComponent>
       <SectionComponent title={t('titles.faq')} sectionId={SECTION_IDS.FAQ}>
