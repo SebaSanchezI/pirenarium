@@ -1,0 +1,84 @@
+{
+  "titles": {
+    "home": "Home",
+    "services": "Servicios",
+    "rooms": "Habitaciones",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "commonSpaces": "Espacios comunes"
+  },
+  "drawer": {
+    "theme": "Tema",
+    "followUs": "Seguinos en",
+    "language": "Idioma"
+  },
+  "section": {
+    "services": {
+      "hotel": {
+        "title": "Hotel",
+        "description": "El hotel tiene capacidad para 200 personas."
+      },
+      "restaurant": {
+        "title": "Restaurante",
+        "description": "Capacidad máxima de 200 personas. Sala de eventos y reuniones."
+      },
+      "meetings": {
+        "title": "Reuniones",
+        "description": "El complejo consta de diferentes salas de reuniones totalmente equipadas."
+      },
+      "wifi": {
+        "title": "WiFi",
+        "description": "WiFi en todas las zonas comunes del complejo."
+      },
+      "parking": {
+        "title": "Parking Gratis",
+        "description": "El complejo consta de parking para un máximo 20 plazas."
+      },
+      "shows": {
+        "title": "Espectáculos",
+        "description": "Espectáculos al aire libre y eventos privados a medida."
+      }
+    },
+    "faq": {
+      "panelId1": {
+        "title": "¿Cómo reservar?",
+        "description": "Para poder reservar una habitacion tenes que ingresar en Booking o en Direct Book. Los links los podras encontrar en la sección de Contactos."
+      },
+      "panelId2": {
+        "title": "Check-In y Check-Out",
+        "description": "El horario de Ingreso al complejo es de las 16:00 a las 22:00. El horario de Salida es de las 06:00 a las 11:00."
+      },
+      "panelId3": {
+        "title": "Cancelación/Prepago",
+        "description": "Las condiciones de cancelación y de pago por adelantado pueden variar según el tipo de alojamiento. Consulta las condiciones de la habitación seleccionada por cualquiera de nuestros medios de comunicación."
+      },
+      "panelId4": {
+        "title": "¿Cúanto cuesta hospedarse?",
+        "description": "Los precios en Albergue Pirenarium pueden variar en función de la estancia (fechas, condiciones del hotel, etc.). Elige tus fechas para ver el precio."
+      },
+      "panelId5": {
+        "title": "¿Cuáles son los tipos de habitaciones?",
+        "description": "El albergue cuenta con 2 tipos: habitaciones dobles y habitaciones compartida mixta de 6 camas. En este alojamiento no hay cunas ni camas supletorias."
+      },
+      "panelId6": {
+        "title": "Medios de pagos",
+        "description": "Actualmente aceptamos solo pagos con tarjeta (no aceptamos pagos en efectivo). Se aceptan las tarjetas VISA, MASTERCARD, AMERICAN EXPRESS y MAESTRO y se reserva el derecho de cargar de forma temporal una cantidad antes de la entrada."
+      },
+      "panelId7": {
+        "title": "Mascotas",
+        "description": "Actualmente no aceptamos mascotas."
+      },
+      "panelId8": {
+        "title": "¿Qué se puede hacer?",
+        "description": "Se puede almorzar y cenar en nuestro restorante. Se pueden realizar eventos privados: fiestas, casamientos, etc. Se puede disfrutar de espectáculos al aire libre y música en vivo."
+      }
+    },
+    "contact": {
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "map": "Mapa",
+      "booking": "Reservas",
+      "email": "Correo Electrónico"
+    }
+  }
+}

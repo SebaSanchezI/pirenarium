@@ -19,12 +19,17 @@ import { NavListDrawer } from './components/NavListDrawer'
 import { LIST_ITEMS_NAV } from './data'
 import ThemeModeToggle from '@shared/ThemeModeToggle/ThemeModeToggle'
 import logoPath from '@assets/logo-chrome.png'
+import SelectLanguage from '@components/selectLanguage/SelectLanguage'
+import { LANGUAGE_LIST } from '@components/selectLanguage/data/languageList'
+import { useTranslation } from 'react-i18next'
 
-interface NavbarProps { }
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
   const location = document.location
   const { theme } = useThemeContext()
+  const { t } = useTranslation()
 
   const [open, setOpen] = useState<boolean>(false)
   const [hash, setHash] = useState<string>(LIST_ITEMS_NAV[0].path)
@@ -39,10 +44,17 @@ const Navbar: React.FC<NavbarProps> = () => {
     location.assign(path)
     setHash(path)
   }
+
   const handleClicListDrawer = (path: string): void => {
     handleClicButton(path)
     setOpen(false)
   }
+
+  // const translation = (word: string) => {
+  //   // const f = `titles.${word}`
+  //   // console.log(f, t('titles.rooms'))
+  //   return t(`titles.${word}`)
+  // }
 
   return (
     <>
@@ -78,12 +90,21 @@ const Navbar: React.FC<NavbarProps> = () => {
                   selected={hash === path}
                   onClick={() => { handleClicButton(path) }}
                   >
-                  <ListItemText primary={label} primaryTypographyProps={{ fontWeight: 600 }} />
+                  <ListItemText primary={t(`titles.${label}`)} primaryTypographyProps={{ fontWeight: 600 }} />
                 </ListItemButton>
               ))}
             </ListItem>
           </Grid>
-          <Grid item padding='0 16px' sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
+          <Grid
+            item
+            padding='0 16px'
+            sx={{
+              display: { xs: 'none', sm: 'none', md: 'flex' },
+              flexDirection: 'row',
+              alignItems: 'center'
+            }}
+          >
+            <SelectLanguage languages={LANGUAGE_LIST} />
             <IconButton
               size='large'
               onClick={() => { handleSendTo(SocialMediaName.INSTAGRAM) }}

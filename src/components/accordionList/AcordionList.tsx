@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { type AccordionItemInterface } from './components/model/accordionItem.type'
 import AccordionItem from './components/accordion/AcordionItem'
+import { useTranslation } from 'react-i18next'
 
 interface AccordionListProps {
   list: AccordionItemInterface[]
@@ -17,6 +18,7 @@ const initialValue: SelectedItem = {
 }
 
 const AccordionList: React.FC<AccordionListProps> = ({ list }) => {
+  const { t } = useTranslation()
   const [selected, setSelected] = useState<SelectedItem>(initialValue)
 
   const handleChange = (expanded: boolean, panelId: number) => {
@@ -28,11 +30,15 @@ const AccordionList: React.FC<AccordionListProps> = ({ list }) => {
 
   return (
     <div>
-        {list.map((accordion: AccordionItemInterface) => (
+        {list.map(({ panelId }: AccordionItemInterface) => (
           <AccordionItem
-            key={accordion.panelId}
-            accordionItem={accordion}
-            expanded={accordion.panelId === selected.id && selected.isExpanded}
+            key={panelId}
+            accordionItem={{
+              panelId,
+              title: t(`section.faq.panelId${panelId}.title`),
+              description: t(`section.faq.panelId${panelId}.description`)
+            }}
+            expanded={panelId === selected.id && selected.isExpanded}
             onChange={handleChange}
           />
         ))
