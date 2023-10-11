@@ -72,6 +72,13 @@
         "title": "What can be done?",
         "description": "You can have lunch and dinner in our restaurant. Private events can be organized: parties, weddings, etc. You can enjoy outdoor shows and live music."
       }
+    },
+    "contact": {
+      "address": "Address",
+      "phone": "Phone number",
+      "map": "Map",
+      "booking": "Booking",
+      "email": "E-mail"
     }
   }
 }

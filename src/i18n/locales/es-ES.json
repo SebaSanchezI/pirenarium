@@ -72,6 +72,13 @@
         "title": "¿Qué se puede hacer?",
         "description": "Se puede almorzar y cenar en nuestro restorante. Se pueden realizar eventos privados: fiestas, casamientos, etc. Se puede disfrutar de espectáculos al aire libre y música en vivo."
       }
+    },
+    "contact": {
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "map": "Mapa",
+      "booking": "Reservas",
+      "email": "Correo Electrónico"
     }
   }
 }

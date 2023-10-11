@@ -1,11 +1,3 @@
-export const CONTACT_TITLES = {
-  ADDRESS: 'Dirección',
-  PHONE: 'Teléfono',
-  MAP: 'Mapa',
-  BOOKING: 'Reservas',
-  EMAIL: 'Correo Electrónico'
-}
-
 export const CONTACT_DATA = {
   ADDRESS: 'Av. del Ejército 27, 22609 Sabiñánigo, Huesca, España',
   PHONE: '34657479796',
