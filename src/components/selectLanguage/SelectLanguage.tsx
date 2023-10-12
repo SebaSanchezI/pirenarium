@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import i18next from 'i18next'
 
-import { Box, FormControl, MenuItem } from '@mui/material'
+import { Box, FormControl, ListItemText, MenuItem } from '@mui/material'
 import Select, { type SelectChangeEvent } from '@mui/material/Select'
 
 import { type Language } from './model/language.type'
@@ -34,12 +34,13 @@ const SelectLanguage: React.FC<SelectLanProps> = ({ languages }) => {
           type='outlined'
         >
           {
-            languages.map(({ id, value, label }: Language) => (
+            languages.map(({ id, value, label, flagImg }: Language) => (
               <MenuItem
                 key={id}
                 value={value}
               >
-                {label}
+                <img src={flagImg} alt={`flag-${label}`} />
+                <ListItemText sx={{ marginLeft: '16px' }}>{label}</ListItemText>
               </MenuItem>
             ))
           }
