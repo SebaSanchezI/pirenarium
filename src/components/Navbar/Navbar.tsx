@@ -50,12 +50,6 @@ const Navbar: React.FC<NavbarProps> = () => {
     setOpen(false)
   }
 
-  // const translation = (word: string) => {
-  //   // const f = `titles.${word}`
-  //   // console.log(f, t('titles.rooms'))
-  //   return t(`titles.${word}`)
-  // }
-
   return (
     <>
       <AppBar sx={{ padding: { xs: '8px 16px', sm: '8px 16px', md: '0 16px' } }}>
