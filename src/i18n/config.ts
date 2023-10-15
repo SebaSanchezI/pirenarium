@@ -9,33 +9,26 @@ import enGB from './locales/en-GB.json'
 
 const defaultLanguage = LANGUAGE_LIST[0].value
 
-export const defaultNamespace = 'default'
-
 export const resources = {
   [LANGUAGE_LIST[0].value]: {
-    [defaultNamespace]: esES
+    translation: esES
   },
   [LANGUAGE_LIST[1].value]: {
-    [defaultNamespace]: enGB
+    translation: enGB
   }
 }
 
-await i18n
+// eslint-disable-next-line @typescript-eslint/no-floating-promises
+i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    defaultNS: defaultNamespace,
-    ns: [defaultNamespace],
     resources,
     lng: defaultLanguage,
-    fallbackLng: defaultLanguage,
+    fallbackLng: 'es-ES',
     interpolation: {
       escapeValue: false
     }
   })
 
 export default i18n
-
-export const changeLanguage = async (language: string) => {
-  await i18n.changeLanguage(language)
-}
