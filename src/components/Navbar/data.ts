@@ -4,7 +4,7 @@ import { type NavItem } from './models/navbar.type'
 export const LIST_ITEMS_NAV: NavItem[] = [
   {
     id: 1,
-    label: 'Home',
+    label: 'home',
     path: `#${SECTION_IDS.HOME}`,
     iconName: 'home'
   },

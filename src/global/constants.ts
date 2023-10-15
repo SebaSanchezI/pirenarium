@@ -1,9 +1,9 @@
 export const TITLE = {
-  MAIN: 'Pirenarium Hotel',
-  SERVICES: 'Servicios',
-  ROOMS: 'Habitaciones',
-  FAQ: 'FAQ',
-  CONTACT: 'Contacto'
+  MAIN: 'Espacio Pirenarium',
+  SERVICES: 'services',
+  ROOMS: 'rooms',
+  FAQ: 'faq',
+  CONTACT: 'contact'
 }
 
 export const SECTION_IDS = {

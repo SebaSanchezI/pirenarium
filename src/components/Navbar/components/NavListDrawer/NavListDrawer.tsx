@@ -22,6 +22,9 @@ import HelpCenterIcon from '@mui/icons-material/HelpCenter'
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone'
 
 import ThemeModeToggle from '@shared/ThemeModeToggle/ThemeModeToggle'
+import SelectLanguage from '@components/selectLanguage/SelectLanguage'
+import { LANGUAGE_LIST } from '@components/selectLanguage/data/languageList'
+import { useTranslation } from 'react-i18next'
 
 interface NavListDrawerProps {
   listItems: NavItem[]
@@ -46,10 +49,11 @@ const ICON_LIST: ItemIcon[] = [
 
 const NavListDrawer: React.FC<NavListDrawerProps> = props => {
   const { listItems, location, color, onClick, sendSocialMediaFunction } = props
+  const { t } = useTranslation()
 
   return <Box sx={{ width: '250px' }}>
     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 16px' }}>
-      <Typography variant='h5'>Pirenarium</Typography>
+      <Typography variant='h5' fontWeight={600}>Pirenarium</Typography>
       {/* <IconButton size='medium' onClick={toggleColorMode}>
           <CloseIcon color='primary' sx={{ fontSize: '30px' }}/>
       </IconButton> */}
@@ -62,7 +66,7 @@ const NavListDrawer: React.FC<NavListDrawerProps> = props => {
       justifyContent: 'space-between',
       padding: '8px 16px'
     }}>
-      <Typography>Tema</Typography>
+      <Typography fontWeight={600}>{t('drawer.theme')}</Typography>
       <Stack flexDirection='row' alignItems='center' width='100%' justifyContent='center'>
         <Typography>Light</Typography>
         <ThemeModeToggle />
@@ -76,7 +80,7 @@ const NavListDrawer: React.FC<NavListDrawerProps> = props => {
       justifyContent: 'space-between',
       padding: '8px 16px'
     }}>
-      <Typography>Seguinos</Typography>
+      <Typography fontWeight={600}>{t('drawer.followUs')}</Typography>
       <Stack flexDirection='row' alignItems='center' width='100%' justifyContent='flex-end'>
         <IconButton
           size='large'
@@ -91,6 +95,16 @@ const NavListDrawer: React.FC<NavListDrawerProps> = props => {
               <FacebookIcon color='primary' />
             </IconButton>
       </Stack>
+    </Box>
+    <Divider />
+    <Box sx={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: '8px 16px'
+    }}>
+      <Typography fontWeight={600}>{t('drawer.language')}</Typography>
+      <SelectLanguage languages={LANGUAGE_LIST} />
     </Box>
     <Divider />
     <List>
@@ -113,7 +127,7 @@ const NavListDrawer: React.FC<NavListDrawerProps> = props => {
               <ListItemIcon>
                 {ICON_LIST.find(i => (i.name === iconName))?.Icon}
               </ListItemIcon>
-              <ListItemText primary={label} primaryTypographyProps={{ fontWeight: 600 }} />
+              <ListItemText primary={t(`titles.${label}`)} primaryTypographyProps={{ fontWeight: 600 }} />
             </ListItemButton>
           </ListItem>
         ))}

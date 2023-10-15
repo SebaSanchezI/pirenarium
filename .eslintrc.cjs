@@ -32,5 +32,10 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
         "react/prop-types": [2, { ignore: ['children'] }],
+        "@typescript-eslint/no-misused-promises": [2, {
+            "checksVoidReturn": {
+              "attributes": false
+            }
+          }]
     }
 }
