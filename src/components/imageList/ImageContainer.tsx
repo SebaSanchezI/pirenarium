@@ -28,7 +28,6 @@ const ImageContainer: React.FC<ImageContainerProps> = ({ list }) => {
 
   return (
     <Box sx={{
-      height: 'calc(90vh - 104px)',
       overflowY: 'scroll',
       '::-webkit-scrollbar': {
         width: '8px'

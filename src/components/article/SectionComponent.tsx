@@ -15,7 +15,7 @@ const SectionComponent: React.FC<SectionComponentProps> = ({ sectionId, title, f
       component='section'
       display='flex'
       flexDirection='column'
-      marginBottom='32px'
+      marginBottom='64px'
       minHeight={(fullscreen !== null && fullscreen !== undefined) ? '100vh' : 0}
     >
       <Typography variant='h3' textAlign='start' marginBottom='16px'>
