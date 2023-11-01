@@ -12,6 +12,7 @@ import { IMAGE_ROOM_LIST } from '@components/imageList/data/imageListData'
 import { LIST_CARDS } from '@components/servicesListCards/data/data'
 import { ACCORDION_DATA_LIST } from '@components/accordionList/data/accordionDataList'
 import { useTranslation } from 'react-i18next'
+import { Container } from '@mui/material'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface LandingProps {}
@@ -20,7 +21,9 @@ const Landing: React.FC<LandingProps> = () => {
   const { t } = useTranslation()
 
   return (
-    <>
+    <Container
+    sx={{ paddingTop: '98px', paddingBottom: '24px' }}
+    >
       <SectionComponent title={t('titles.home')} sectionId={SECTION_IDS.HOME}>
         <ImageSlider slices={Slices} autoPlay width='100%' height='480px' />
       </SectionComponent>
@@ -36,7 +39,7 @@ const Landing: React.FC<LandingProps> = () => {
       <SectionComponent title={t('titles.contact')} sectionId={SECTION_IDS.CONTACT}>
         <Contact />
       </SectionComponent>
-    </>
+    </Container>
   )
 }
 
