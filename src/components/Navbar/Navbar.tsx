@@ -42,9 +42,13 @@ const Navbar: React.FC<NavbarProps> = () => {
   const handleClicButton = (path: string): void => {
     setHash(path)
     const sectionId: string = path.slice(1)
-    console.log(sectionId)
     const section = document.getElementById(sectionId)
-    if (section != null) section.scrollIntoView({ behavior: 'smooth' })
+    if (section != null) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end'
+      })
+    }
   }
 
   const handleClicListDrawer = (path: string): void => {
