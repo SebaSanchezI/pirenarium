@@ -1,10 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import * as path from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import * as path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/pirenarium/",
+  base: "./",
   resolve: {
     alias: {
       "@assets": `${path.resolve(__dirname, "./src/assets/")}`,
@@ -18,6 +18,6 @@ export default defineConfig({
       "@global": `${path.resolve(__dirname, "./src/global")}`,
       "@hooks": `${path.resolve(__dirname, "./src/hooks/")}`,
       "@public": `${path.resolve(__dirname, "./public/")}`,
-    }
-  }
-})
+    },
+  },
+});
