@@ -27,7 +27,6 @@ import { useTranslation } from 'react-i18next'
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
-  const location = document.location
   const { theme } = useThemeContext()
   const { t } = useTranslation()
 
@@ -41,8 +40,15 @@ const Navbar: React.FC<NavbarProps> = () => {
   }
 
   const handleClicButton = (path: string): void => {
-    location.assign(path)
     setHash(path)
+    const sectionId: string = path.slice(1)
+    const section = document.getElementById(sectionId)
+    if (section != null) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end'
+      })
+    }
   }
 
   const handleClicListDrawer = (path: string): void => {
