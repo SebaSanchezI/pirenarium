@@ -7,6 +7,6 @@ export const CONTACT_DATA = {
 export const BOOK_LINKS = {
   ROOMRACCOON: {
     name: "RoomRaccoon",
-    url: "https://booking.roomraccoon.es/albergue-pirenarium/es/",
+    url: "https://booking.roomraccoon.es/alberguepirenarium/es/",
   },
 };
