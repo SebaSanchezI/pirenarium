@@ -42,7 +42,7 @@ const Landing: React.FC<LandingProps> = () => {
       <SectionComponent title={t('titles.faq')} sectionId={SECTION_IDS.FAQ} ref={faqRef}>
         <AccordionList list={ACCORDION_DATA_LIST}/>
       </SectionComponent>
-      <SectionComponent title={t('titles.contact')} sectionId={SECTION_IDS.CONTACT} ref={contactRef}>
+      <SectionComponent title={t('titles.booking')} sectionId={SECTION_IDS.BOOKING} ref={contactRef}>
         <Contact />
       </SectionComponent>
     </Container>
