@@ -5,7 +5,8 @@
     "rooms": "Rooms",
     "faq": "FAQ",
     "contact": "Contact",
-    "commonSpaces": "Common spaces"
+    "commonSpaces": "Common spaces",
+    "booking": "Booking"
   },
   "drawer": {
     "theme": "Theme",

@@ -3,7 +3,7 @@ export const TITLE = {
   SERVICES: 'services',
   ROOMS: 'rooms',
   FAQ: 'faq',
-  CONTACT: 'contact'
+  BOOKING: 'booking'
 }
 
 export const SECTION_IDS = {
@@ -11,5 +11,5 @@ export const SECTION_IDS = {
   SERVICES: 'services',
   ROOMS: 'rooms',
   FAQ: 'faq',
-  CONTACT: 'contact'
+  BOOKING: 'booking'
 }

@@ -5,7 +5,8 @@
     "rooms": "Habitaciones",
     "faq": "FAQ",
     "contact": "Contacto",
-    "commonSpaces": "Espacios comunes"
+    "commonSpaces": "Espacios comunes",
+    "booking": "Reservar"
   },
   "drawer": {
     "theme": "Tema",
