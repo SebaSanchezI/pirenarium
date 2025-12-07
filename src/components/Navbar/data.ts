@@ -28,8 +28,8 @@ export const LIST_ITEMS_NAV: NavItem[] = [
   },
   {
     id: 5,
-    label: TITLE.CONTACT,
-    path: `#${SECTION_IDS.CONTACT}`,
+    label: TITLE.BOOKING,
+    path: `#${SECTION_IDS.BOOKING}`,
     iconName: 'contactPhone'
   }
 ]
